@@ -1,82 +1,70 @@
-# PAPER-VIZ
+# PAPER-VIZ — Scientific Art Direction
 
-**Học thiết kế figure, chart, diagram và trình bày paper khoa học — từ nền tảng thị giác đến một bộ hình có thể bảo vệ trước reviewer.**
+**Học để quyết định thiết kế, chỉ đạo AI và duyệt figure/chart/diagram cho paper. Không học để tự viết code hoặc tự thao tác phần mềm vẽ.**
 
-Ngôn ngữ học: tiếng Việt, giữ thuật ngữ chuyên môn tiếng Anh để tra cứu. Đối tượng: researcher đã hiểu phương pháp và dữ liệu của mình nhưng muốn tự thiết kế, thay vì phụ thuộc vào template hoặc ảnh AI sinh sẵn.
+> Bạn quyết định hình cần nói gì, nên trông như thế nào và vì sao một phương án tốt hơn. AI dựng hình, chỉnh source, tạo biến thể và xuất file. Bạn giữ quyền duyệt nội dung và chất lượng cuối cùng.
 
-> Mục tiêu không phải làm kết quả trông tốt hơn thực tế. Mục tiêu là giúp người đọc hiểu đúng đóng góp, lần theo cơ chế và kiểm tra bằng chứng với ít công sức hơn.
+Đây là bản thiết kế lại theo yêu cầu của chủ repo. Lộ trình cũ thiên về draw.io, Inkscape, Matplotlib và thao tác dựng hình đã được thay bằng **visual literacy → art direction → critique → paper-level editorial judgment**. Không có bài tập bắt buộc lập trình, kéo shape hoặc tự dựng lại figure bằng tay.
 
-## Bắt đầu
+## Bắt đầu học
 
-1. Đọc [START-HERE](START-HERE.md) và làm bài chẩn đoán trước khi xem thêm khóa học.
-2. Chọn nhịp học trong [ROADMAP — 24 tuần](ROADMAP.md).
-3. Học theo [16 module](modules/README.md), mỗi module có kiến thức, bài luyện, tài liệu và điều kiện hoàn thành.
-4. Lưu bài làm theo [portfolio](portfolio/README.md), dùng [rubric](rubrics/mastery.md) và nhận phản hồi từ người chưa biết bài.
-5. Dùng [catalog tài liệu](resources/README.md), [atlas paper](resources/paper-atlas.md) và [template](templates/README.md) khi thực hành.
+- [START-HERE](START-HERE.md): bài chẩn đoán năng lực nhìn và nhận xét, không cần biết công cụ.
+- [ROADMAP](ROADMAP.md): 12 tuần nền tảng và 12 tuần studio nâng cao.
+- [12 submodule](modules/README.md): kiến thức, tài liệu chọn lọc, bài tập chỉ đạo AI và điều kiện hoàn thành.
+- [Materials](resources/README.md): sách, khóa học, bài viết; chỉ rõ phần nên đọc và cách áp dụng.
+- [Style atlas](resources/style-atlas.md): học từ paper bằng câu hỏi thiết kế, không bằng danh tiếng.
+- [Critique handbook](critique/README.md): biến “nhựa”, “rối”, “không sang” thành yêu cầu sửa có thể kiểm tra.
+- [Brief và phiếu duyệt](templates/README.md) · [Prompt cho AI](ai/README.md) · [Studio và capstone](studio/README.md).
 
-**24 tuần × 6–8 giờ/tuần** là ngân sách khởi đầu do curriculum này đề xuất, không phải cam kết thành chuyên gia sau 144–192 giờ. Tiếp tục vòng thiết kế–đánh giá–chỉnh sửa trên nhiều paper sau khóa nền tảng. [Capstone](projects/04-paper-package/README.md) là mốc đánh giá đầu tiên, không phải chứng chỉ A*.
+## Phân công con người và AI
 
-## Cấu trúc năng lực
+| Công việc | Bạn học và quyết định | AI thực thi |
+|---|---|---|
+| Mục đích | Câu hỏi người đọc, claim, thứ tự ưu tiên, phạm vi phải giữ | Trích nguồn, liệt kê chỗ chưa rõ, chuẩn bị bản tóm tắt |
+| Art direction | Reference chính, bố cục, ngôn ngữ component, typography, màu và hệ nét | Dựng phương án A/B đúng brief, không tự thêm cơ chế |
+| Chart | Cần so sánh điều gì, encoding, scale, điều kiện và uncertainty | Đọc dữ liệu, tính toán theo protocol, vẽ và kiểm tra provenance |
+| Critique | Chỉ ra vùng lỗi, nguyên nhân, mức ảnh hưởng và sửa ưu tiên | Chỉnh đúng vùng, giữ phần đã duyệt, xuất before/after |
+| Phát hành | Duyệt hình trong paper thật, nội dung, quyền sử dụng và giới hạn | Xuất source/vector/preview, kiểm tra kỹ thuật và báo phần chưa làm |
 
-| Nhánh | Bạn phải tự làm được |
+Bạn không phải học cách sửa kerning bằng chuột, nhưng cần nhìn ra spacing chưa tốt và yêu cầu AI sửa. Bạn không phải code error bar, nhưng cần biết nó biểu diễn gì để không duyệt một hình đẹp mà sai.
+
+## 12 submodule
+
+| Module | Quyết định cần làm chủ |
 |---|---|
-| Visual craft | Chọn hình dạng, tỷ lệ, chữ, màu, nét và khoảng cách có chủ đích; không nhầm đẹp với nhiều trang trí. |
-| Scientific diagrams | Biến nguồn phương pháp thành đối tượng, quan hệ, trạng thái, pipeline và recipe trung thành với nguồn. |
-| Evidence charts | Chọn chart theo câu hỏi, giữ provenance, cấu hình so sánh, đơn vị, uncertainty và dữ liệu thật. |
-| Paper presentation | Kết nối claim–evidence–figure–caption–paragraph; tổ chức cả bài, không chỉ hình riêng lẻ. |
-| Production & critique | Xuất bản vector, kiểm tra kích thước cuối, tái tạo từ source và dùng phản hồi người đọc để sửa. |
+| [01 — Visual judgment](modules/01-visual-judgment/README.md) | Vì sao hình đẹp hoặc chưa đẹp? Phân biệt taste, clarity và truth. |
+| [02 — Composition](modules/02-composition/README.md) | Đặt trọng tâm ở đâu? Nhóm, căn, chia panel và dùng khoảng trắng thế nào? |
+| [03 — Component & line craft](modules/03-component-craft/README.md) | Hình dáng, tỷ lệ, border, góc, connector và cách ghép cụm. |
+| [04 — Typography](modules/04-typography/README.md) | Hệ chữ, độ đậm, khoảng cách, toán học và quan hệ chữ–khối. |
+| [05 — Color](modules/05-color/README.md) | Palette, sắc độ, vai trò màu, tương phản và colormap. |
+| [06 — Reference & art direction](modules/06-art-direction/README.md) | Học nguyên lý từ reference, viết style brief, không sao chép skin. |
+| [07 — Complex diagrams](modules/07-complex-diagrams/README.md) | Kiến trúc đa dạng, pipeline, recipe, topology và nhiều cấp chi tiết. |
+| [08 — Chart design](modules/08-chart-design/README.md) | Chọn biểu diễn theo câu hỏi, không theo template. |
+| [09 — Evidence judgment](modules/09-evidence-judgment/README.md) | Duyệt dữ liệu, uncertainty, qualitative panels và giới hạn kết luận. |
+| [10 — Paper presentation](modules/10-paper-presentation/README.md) | Cả bộ figure, caption, bảng và phần chữ tạo thành một lập luận. |
+| [11 — AI design direction](modules/11-ai-direction/README.md) | Brief, phương án, phản hồi, scope thay đổi và dừng đúng lúc. |
+| [12 — Critique & mastery](modules/12-critique-mastery/README.md) | Duyệt có lý do, thử người đọc và chuyển năng lực sang paper mới. |
 
-## Các module
+Các submodule là **thư mục bài học**, không phải Git submodules. Không cần cài môi trường lập trình để học. Có thể đọc hoàn toàn trên GitHub; công cụ sản xuất thuộc môi trường AI của bạn.
 
-| Module | Trọng tâm |
-|---|---|
-| [00](modules/00-orientation/README.md) | Chẩn đoán, tiêu chuẩn đầu ra và cách luyện |
-| [01](modules/01-perception-composition/README.md) | Nhận thức thị giác, grouping, hierarchy và composition |
-| [02](modules/02-typography-geometry/README.md) | Typography, toán học, tỷ lệ block và hệ nét |
-| [03](modules/03-color-accessibility/README.md) | Màu semantic, colormap, tương phản và accessibility |
-| [04](modules/04-vector-drawio/README.md) | draw.io, Inkscape và component chỉnh sửa được |
-| [05](modules/05-diagram-grammar/README.md) | Ngữ pháp diagram, nhiều kiến trúc, không mặc định attention |
-| [06](modules/06-complex-pipelines/README.md) | Pipeline nhiều nhánh, training recipe và chuyển checkpoint |
-| [07](modules/07-chart-choice/README.md) | Chọn chart theo tác vụ người đọc |
-| [08](modules/08-uncertainty/README.md) | Uncertainty, so sánh công bằng và giới hạn suy luận |
-| [09](modules/09-matplotlib/README.md) | Matplotlib và đường xuất hình tái tạo được |
-| [10](modules/10-ai-results/README.md) | Pareto, scaling, ablation, latency và nhiều benchmark |
-| [11](modules/11-qualitative-evidence/README.md) | Qualitative panels, heatmap, embedding và image integrity |
-| [12](modules/12-paper-narrative/README.md) | Paper narrative, caption, bảng và notation |
-| [13](modules/13-publication/README.md) | LaTeX, export, venue profile và kiểm tra PDF cuối |
-| [14](modules/14-critique/README.md) | Đọc style từ paper, critique và thử nghiệm khả năng hiểu |
-| [15](modules/15-capstone/README.md) | Portfolio, capstone, chuyển giao và lộ trình nâng cao |
+## Nhịp học
 
-`modules/` là các **submodule học tập dạng thư mục**, không phải Git submodules trỏ tới repository khác. Không cần `git submodule update` và không có khóa học trả phí được sao chép vào repo.
+**Tuần 1–12:** một module/tuần, khoảng 4–6 giờ học và đánh giá của con người. **Tuần 13–24:** studio trên các cơ chế khác nhau và một paper thật. Thời gian chờ AI hoặc chạy thí nghiệm không tính vào số giờ này. Đây là ngân sách đề xuất, không là cam kết trở thành chuyên gia hoặc đạt điểm presentation cụ thể.
 
-## Materials và công cụ
+Một buổi học: xem nguồn → tự nêu quyết định → giao AI dựng → so sánh bản xuất → viết critique → duyệt hoặc yêu cầu sửa. Sản phẩm học tập chính là **brief, quyết định chọn, phiếu sửa và hồ sơ duyệt**, kèm hình do AI tạo.
 
-Nhánh style dùng CalArts, Bang Wong và tài liệu thiết kế figure của MIT; nhánh chart dùng Wilke, Rougier, tài liệu Matplotlib và học phần UW CSE512. Đây là tuyển chọn học liệu, không phải một khóa được các tổ chức đó chứng nhận. Xem nguồn, cách truy cập và phạm vi đã kiểm tra trong [catalog](resources/README.md).
+## Materials trọng tâm
 
-Khởi đầu bằng **draw.io + Inkscape** cho diagram và **Python/Matplotlib** cho chart. Illustrator là lựa chọn bổ sung, không là điều kiện để học. Code không làm hình kém chuyên nghiệp; thiết kế thiếu chủ đích và biểu diễn sai mới là vấn đề.
+CalArts và sách của Ellen Lupton cho ngôn ngữ thiết kế; Bang Wong cho figure khoa học; Wilke và Munzner cho thiết kế chart; *Discussing Design* cho critique; MIT Communication Lab cho thông điệp và người đọc. Chi tiết, đường dẫn và giới hạn truy cập nằm trong [catalog](resources/README.md).
 
-## Thực hành có thể chạy
+Các bài tập trong repo là bài tập tự học riêng, không phải cách thay thế bài nộp/chứng chỉ của khóa gốc. Quy định về AI của từng khóa, hội nghị hoặc nguồn dữ liệu vẫn phải được tuân thủ.
 
-```bash
-python scripts/check_repo.py
-python -m pip install -r requirements.txt
-python examples/plot_tradeoff.py --out-dir /tmp/paper-viz-demo
-python -m unittest discover -s tests -v
-```
+## Ranh giới chất lượng
 
-Các số liệu trong `examples/data/` là **SYNTHETIC — dữ liệu luyện tập**, không phải kết quả nghiên cứu. Không có benchmark hoặc log huấn luyện được tái dựng từ paper. Không dùng file luyện tập để đưa ra claim thật.
+**Không phải mục tiêu:** làm giả nét vẽ tay, che việc dùng AI, tối đa số hình, học mọi phần mềm, hoặc làm phương pháp trông tốt hơn dữ liệu.
 
-## Quy tắc học và phát hành
+**Mục tiêu:** sản phẩm có chủ đích, đẹp trong ngữ cảnh học thuật, dễ đọc, trung thành với nghiên cứu và có thể yêu cầu chỉnh sửa chính xác.
 
-- Bắt đầu bằng một câu hỏi khoa học và nguồn; không bắt đầu bằng bảng màu.
-- Học từ hình gốc: phân tích rồi chuyển nguyên lý sang cơ chế khác, không đổi nhãn trên artwork của người khác.
-- Phân biệt sở thích thẩm mỹ, hiểu đúng và độ trung thực; không cộng điểm đẹp để bù cho sai khoa học.
-- Không gọi một paper được giải là paper có “figure score cao” khi chưa có bằng chứng riêng.
-- Không đưa manuscript mật, dữ liệu nội bộ, font thương mại hay tài liệu khóa học có bản quyền vào repo công khai.
-- Khi dùng AI, ghi rõ vai trò; tác giả phải kiểm tra dữ liệu, topology, notation và bản xuất cuối.
+Một paper được giải không tự có “figure score cao”. Một điểm style do AI tự chấm không xác nhận tiến bộ. Dùng [rubric](critique/rubric.md) để tách chất lượng hình thức, hiểu đúng và trung thực; không cộng chúng thành điểm reviewer giả.
 
-## Trạng thái và nguồn gốc
-
-Bản khởi tạo curriculum: **2026-10-19**. Nguồn bên ngoài được truy cập để kiểm tra tiêu đề, phạm vi học và trang hướng dẫn; không có tuyên bố đã học hết các khóa hoặc kiểm chứng cải thiện điểm reviewer. Bài tập, thời lượng, thứ tự học và rubric là đề xuất biên soạn riêng cho PAPER-VIZ.
-
-Xem [CONTRIBUTING](CONTRIBUTING.md), [RIGHTS](RIGHTS.md) và [VERIFICATION](VERIFICATION.md). Chủ repository chưa chọn giấy phép chung; việc repo công khai không tự thay thế giấy phép của từng nguồn.
+[Phạm vi kiểm chứng](VERIFICATION.md) · [Quyền nội dung](RIGHTS.md) · [Quy tắc đóng góp](CONTRIBUTING.md).
